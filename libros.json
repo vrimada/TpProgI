@@ -1,0 +1,209 @@
+[
+    {
+        "id": "L001",
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "editorial": "Sudamericana",
+        "anio": "1967",
+        "genero": "Realismo mágico",
+        "disponible": false
+    },
+    {
+        "id": "L002",
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "editorial": "Secker & Warburg",
+        "anio": "1949",
+        "genero": "Distopía",
+        "disponible": false
+    },
+    {
+        "id": "L003",
+        "titulo": "El principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "editorial": "Reynal & Hitchcock",
+        "anio": "1943",
+        "genero": "Fábula",
+        "disponible": false
+    },
+    {
+        "id": "L004",
+        "titulo": "Orgullo y prejuicio",
+        "autor": "Jane Austen",
+        "editorial": "T. Egerton",
+        "anio": "1813",
+        "genero": "Romance",
+        "disponible": true
+    },
+    {
+        "id": "L005",
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "editorial": "Francisco de Robles",
+        "anio": "1605",
+        "genero": "Aventura",
+        "disponible": true
+    },
+    {
+        "id": "L006",
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "editorial": "Bloomsbury",
+        "anio": "1997",
+        "genero": "Fantasía",
+        "disponible": false
+    },
+    {
+        "id": "L007",
+        "titulo": "Los juegos del hambre",
+        "autor": "Suzanne Collins",
+        "editorial": "Scholastic",
+        "anio": "2008",
+        "genero": "Ciencia ficción",
+        "disponible": false
+    },
+    {
+        "id": "L008",
+        "titulo": "La sombra del viento",
+        "autor": "Carlos Ruiz Zafón",
+        "editorial": "Planeta",
+        "anio": "2001",
+        "genero": "Misterio",
+        "disponible": false
+    },
+    {
+        "id": "L009",
+        "titulo": "Crónica de una muerte anunciada",
+        "autor": "Gabriel García Márquez",
+        "editorial": "Sudamericana",
+        "anio": "1981",
+        "genero": "Novela corta",
+        "disponible": true
+    },
+    {
+        "id": "L010",
+        "titulo": "Rayuela",
+        "autor": "Julio Cortázar",
+        "editorial": "Sudamericana",
+        "anio": "1963",
+        "genero": "Narrativa",
+        "disponible": false
+    },
+    {
+        "id": "L011",
+        "titulo": "Fahrenheit 451",
+        "autor": "Ray Bradbury",
+        "editorial": "Ballantine Books",
+        "anio": "1953",
+        "genero": "Ciencia ficción",
+        "disponible": false
+    },
+    {
+        "id": "L012",
+        "titulo": "Matar a un ruiseñor",
+        "autor": "Harper Lee",
+        "editorial": "J.B. Lippincott & Co.",
+        "anio": "1960",
+        "genero": "Drama",
+        "disponible": false
+    },
+    {
+        "id": "L013",
+        "titulo": "Drácula",
+        "autor": "Bram Stoker",
+        "editorial": "Archibald Constable",
+        "anio": "1897",
+        "genero": "Terror",
+        "disponible": false
+    },
+    {
+        "id": "L014",
+        "titulo": "Frankenstein",
+        "autor": "Mary Shelley",
+        "editorial": "Lackington, Hughes, Harding, Mavor & Jones",
+        "anio": "1818",
+        "genero": "Terror",
+        "disponible": false
+    },
+    {
+        "id": "L015",
+        "titulo": "El Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "editorial": "George Allen & Unwin",
+        "anio": "1937",
+        "genero": "Fantasía",
+        "disponible": false
+    },
+    {
+        "id": "L016",
+        "titulo": "La ladrona de libros",
+        "autor": "Markus Zusak",
+        "editorial": "Picador",
+        "anio": "2005",
+        "genero": "Drama histórico",
+        "disponible": true
+    },
+    {
+        "id": "L017",
+        "titulo": "It",
+        "autor": "Stephen King",
+        "editorial": "Viking",
+        "anio": "1986",
+        "genero": "Terror",
+        "disponible": true
+    },
+    {
+        "id": "L018",
+        "titulo": "Las ventajas de ser invisible",
+        "autor": "Stephen Chbosky",
+        "editorial": "MTV Books",
+        "anio": "1999",
+        "genero": "Juvenil",
+        "disponible": true
+    },
+    {
+        "id": "L019",
+        "titulo": "El código Da Vinci",
+        "autor": "Dan Brown",
+        "editorial": "Doubleday",
+        "anio": "2003",
+        "genero": "Thriller",
+        "disponible": true
+    },
+    {
+        "id": "L020",
+        "titulo": "El nombre del viento",
+        "autor": "Patrick Rothfuss",
+        "editorial": "DAW Books",
+        "anio": "2007",
+        "genero": "Fantasía épica",
+        "disponible": true
+    },
+    {
+        "id": "L021",
+        "titulo": "Armagedon",
+        "autor": "Kiroshi",
+        "editorial": "Vanesa Editions",
+        "anio": "2025",
+        "genero": "Romance",
+        "disponible": false
+    },
+    {
+        "id": "L022",
+        "titulo": "Kiroshi y la Nina en aventuras locas",
+        "autor": "Vanesa Rimada",
+        "editorial": "Vanesa Editions",
+        "anio": "2025",
+        "genero": "Terror",
+        "disponible": true
+    },
+    {
+        "id": "L101",
+        "titulo": "Nina siesta",
+        "autor": "Vanesa Rimada",
+        "editorial": "Vanesa Editions",
+        "anio": "2025",
+        "genero": "Terror",
+        "disponible": true
+    }
+]

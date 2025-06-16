@@ -1,0 +1,128 @@
+[
+    {
+        "id": "U001",
+        "nombre": "Lucía",
+        "apellido": "González",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U002",
+        "nombre": "Martín",
+        "apellido": "Pérez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U003",
+        "nombre": "Camila",
+        "apellido": "Rodríguez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U004",
+        "nombre": "Sofía",
+        "apellido": "Martínez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U005",
+        "nombre": "Mateo",
+        "apellido": "López",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U006",
+        "nombre": "Valentina",
+        "apellido": "Gómez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U007",
+        "nombre": "Juan",
+        "apellido": "Díaz",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U008",
+        "nombre": "Agustina",
+        "apellido": "Fernández",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U009",
+        "nombre": "Tomás",
+        "apellido": "Sánchez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U010",
+        "nombre": "Milagros",
+        "apellido": "Ramírez",
+        "tipo": "alumno"
+    },
+    {
+        "id": "U011",
+        "nombre": "Laura",
+        "apellido": "Mendoza",
+        "tipo": "docente"
+    },
+    {
+        "id": "U012",
+        "nombre": "Jorge",
+        "apellido": "Herrera",
+        "tipo": "docente"
+    },
+    {
+        "id": "U013",
+        "nombre": "Patricia",
+        "apellido": "Alvarez",
+        "tipo": "docente"
+    },
+    {
+        "id": "U014",
+        "nombre": "Esteban",
+        "apellido": "Suárez",
+        "tipo": "docente"
+    },
+    {
+        "id": "U015",
+        "nombre": "Graciela",
+        "apellido": "Molina",
+        "tipo": "docente"
+    },
+    {
+        "id": "U016",
+        "nombre": "Daniel",
+        "apellido": "Castro",
+        "tipo": "docente"
+    },
+    {
+        "id": "U017",
+        "nombre": "Paula",
+        "apellido": "Ríos",
+        "tipo": "docente"
+    },
+    {
+        "id": "U018",
+        "nombre": "Ricardo",
+        "apellido": "Navarro",
+        "tipo": "docente"
+    },
+    {
+        "id": "U019",
+        "nombre": "Ana",
+        "apellido": "Vega",
+        "tipo": "docente"
+    },
+    {
+        "id": "U020",
+        "nombre": "Sebastián",
+        "apellido": "Cruz",
+        "tipo": "docente"
+    },
+    {
+        "id": "U1000",
+        "nombre": "Kiroshi",
+        "apellido": "Elma Bolivar",
+        "tipo": "docente"
+    }
+]
