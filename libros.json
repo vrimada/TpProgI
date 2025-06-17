@@ -141,7 +141,7 @@
         "editorial": "Picador",
         "anio": "2005",
         "genero": "Drama histórico",
-        "disponible": true
+        "disponible": false
     },
     {
         "id": "L017",
@@ -150,7 +150,7 @@
         "editorial": "Viking",
         "anio": "1986",
         "genero": "Terror",
-        "disponible": true
+        "disponible": false
     },
     {
         "id": "L018",

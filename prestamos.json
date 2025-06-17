@@ -3,7 +3,7 @@
         "id": "P001",
         "id_usuario": "U001",
         "id_libro": "L001",
-        "fecha_prestamo": "2025-05-01",
+        "fecha_prestamo": "01/05/2025",
         "fecha_devolucion": "15/05/2025"
     },
     {
@@ -38,7 +38,7 @@
         "id": "P006",
         "id_usuario": "U006",
         "id_libro": "L006",
-        "fecha_prestamo": "2025-05-12",
+        "fecha_prestamo": "12/05/2025",
         "fecha_devolucion": ""
     },
     {
@@ -114,6 +114,18 @@
         "id_libro": "L001",
         "id_usuario": "U1000",
         "fecha_prestamo": "16/06/2025",
+        "fecha_devolucion": ""
+    },
+    {
+        "id_libro": "L016",
+        "id_usuario": "U150",
+        "fecha_prestamo": "30/05/05",
+        "fecha_devolucion": ""
+    },
+    {
+        "id_libro": "L017",
+        "id_usuario": "U151",
+        "fecha_prestamo": "30/01/2025",
         "fecha_devolucion": ""
     }
 ]

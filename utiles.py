@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import os
 
@@ -28,6 +29,17 @@ def pedir_entero(mensaje):
             return int(valor)
         except ValueError:
             print(" Ingresá un número entero válido.")
+
+def pedir_fecha(mensaje):
+    while True:
+        valor = input(mensaje)
+        try:
+        # Intenta convertir el string en una fecha con formato exacto DD/MM/AAAA
+            fecha = datetime.strptime(valor, "%d/%m/%Y")
+            return valor
+        except ValueError:
+            print(" Ingresá una fecha válida en formato DD/MM/AAAA.")
+
 def valida_tipo_usuario(mensaje):
         while True:
             valor = input(mensaje)

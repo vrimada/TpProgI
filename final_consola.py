@@ -54,7 +54,7 @@ def registrar_prestamo(prestamos, libros, usuarios):
     prestamo = {
         "id_libro": id_libro,
         "id_usuario": id_usuario,
-        "fecha_prestamo": input("Fecha de préstamo (DD/MM/AAAA): "),
+        "fecha_prestamo": u.pedir_fecha("Fecha de préstamo (DD/MM/AAAA): "),
         "fecha_devolucion": ""
     }
     prestamos.append(prestamo)
