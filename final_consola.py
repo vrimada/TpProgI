@@ -1,6 +1,5 @@
 import utiles as u
-from colorama import Fore, Style, init
-init()
+# Biblioteca Escolar - Gestión de Préstamos
 
 # Archivos
 ARCHIVO_LIBROS = "libros.json"
@@ -125,39 +124,42 @@ def menu():
     prestamos = u.cargar_datos(ARCHIVO_PRESTAMOS)
 
     while True:
-        print("\n📘 MENÚ BIBLIOTECA ESCOLAR")
+        print( u.info("\n📘 MENÚ BIBLIOTECA ESCOLAR\n"))
         print("1. Agregar libro")
         print("2. Agregar usuario")
         print("3. Registrar préstamo")
         print("4. Devolver libro")
         print("5. Mostrar libros")
         print("6. Mostrar usuarios")
-        print("7.Imprimir listado de prestamos")
-        print("8. Salir")
+        print("7. Imprimir listado de prestamos")
+        print("8. Salir\n")
         opcion = input("Elegí una opción: ")
 
-        if opcion == "1":
-            agregar_libro(libros)
-        elif opcion == "2":
-            agregar_usuario(usuarios)
-        elif opcion == "3":
-            registrar_prestamo(prestamos, libros, usuarios)
-        elif opcion == "4":
-            devolver_libro(prestamos, libros)
-        elif opcion == "5":
-            mostrar_libros(libros)
-        elif opcion == "6":
-            mostrar_usuarios(usuarios)
-        elif opcion == "7":
-            mostrar_prestamos_activos()
-        elif opcion == "8":    
-            u.guardar_datos(ARCHIVO_LIBROS, libros)
-            u.guardar_datos(ARCHIVO_USUARIOS, usuarios)
-            u.guardar_datos(ARCHIVO_PRESTAMOS, prestamos)
-            print("💾 Datos guardados. ¡Hasta luego!")
-            break
-        else:
-            print(" Opción no válida. Intentá de nuevo.")
+      
+        # Usar match-case para manejar las opciones
+        match opcion:
+                case "1":
+                    agregar_libro(libros)
+                case "2":
+                    agregar_usuario(usuarios)
+                case "3":
+                    registrar_prestamo(prestamos, libros, usuarios)
+                case "4":
+                    devolver_libro(prestamos, libros)
+                case "5":
+                    mostrar_libros(libros)
+                case "6":
+                    mostrar_usuarios(usuarios)
+                case "7":
+                    mostrar_prestamos_activos()
+                case "8":
+                    u.guardar_datos(ARCHIVO_LIBROS, libros)
+                    u.guardar_datos(ARCHIVO_USUARIOS, usuarios)
+                    u.guardar_datos(ARCHIVO_PRESTAMOS, prestamos)
+                    print("💾 Datos guardados. ¡Hasta luego!")
+                    break
+                case _:
+                    print("Opción no válida. Ingrese un numero del 1 al 8.")
 
 # Ejecutar menú
 if __name__ == "__main__":

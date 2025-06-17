@@ -1,7 +1,8 @@
 from datetime import datetime
 import json
 import os
-
+from colorama import Fore, Style, init
+init()
 
 # Cargar o inicializar datos de un archivo JSON
 def cargar_datos(archivo):
@@ -13,8 +14,23 @@ def cargar_datos(archivo):
 def guardar_datos(archivo, datos):
     with open(archivo, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
-
-
+# Colores
+colores = {
+        "verde": Fore.GREEN,
+        "rojo": Fore.RED,
+        "azul": Fore.BLUE,
+        "amarillo": Fore.YELLOW,
+        "cian": Fore.CYAN,
+        "magenta": Fore.MAGENTA,
+        "blanco": Fore.WHITE
+    }
+def error(texto):
+    
+    return f"{Fore.RED}{texto}{ Style.RESET_ALL}"
+def exito(texto):
+    return f"{Fore.GREEN}{texto}{ Style.RESET_ALL}"
+def info(texto):
+    return f"{Fore.CYAN}{texto}{ Style.RESET_ALL}"
 # Funciones para pedir entradas al usuario con validación
 def pedir_string(mensaje):
         while True:
@@ -22,7 +38,7 @@ def pedir_string(mensaje):
             if valor != "" and not valor.isdigit():
                 return valor
             else:
-                print( " Ingresá un texto válido (no vacío ni solo números).")
+                print( error(" Ingresá un texto válido (no vacío ni solo números)."))
 
 def pedir_entero(mensaje):
     while True:
@@ -30,7 +46,7 @@ def pedir_entero(mensaje):
         try:
             return int(valor)
         except ValueError:
-           print(" Ingresá un número entero válido.")
+           print( error("rojo"," Ingresá un número entero válido."))
 
 def pedir_fecha(mensaje):
     while True:
@@ -40,7 +56,7 @@ def pedir_fecha(mensaje):
             fecha = datetime.strptime(valor, "%d/%m/%Y")
             return valor
         except ValueError:
-            print(" Ingresá una fecha válida en formato DD/MM/AAAA.")
+            print( error("rojo"," Ingresá una fecha válida en formato DD/MM/AAAA."))
 
 def valida_tipo_usuario(mensaje):
         while True:
@@ -48,4 +64,4 @@ def valida_tipo_usuario(mensaje):
             if valor.lower() in ["alumno", "docente"]:
                 return valor.lower()
             else:
-                print(" Ingresá un tipo válido (alumno o docente).")
+                print( error("rojo"," Ingresá un tipo válido (alumno o docente)."))
