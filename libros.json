@@ -205,5 +205,41 @@
         "anio": "2025",
         "genero": "Terror",
         "disponible": true
+    },
+    {
+        "id": "L101",
+        "titulo": "La nina loca",
+        "autor": "Vanesa Rimada",
+        "editorial": "Vanesa Editions",
+        "anio": 2025,
+        "genero": "Terror",
+        "disponible": true
+    },
+    {
+        "id": "L115",
+        "titulo": "Steffanos kitchens",
+        "autor": "Vanesa Rimada",
+        "editorial": "Vanesa Editions",
+        "anio": 2024,
+        "genero": "Terror",
+        "disponible": true
+    },
+    {
+        "id": "L26",
+        "titulo": "La guerra de los mundos",
+        "autor": "No me acuerdo",
+        "editorial": "Ediio",
+        "anio": 1960,
+        "genero": "Ficcion",
+        "disponible": true
+    },
+    {
+        "id": "L27",
+        "titulo": "Caperucita Roja",
+        "autor": "Anderson",
+        "editorial": "Edio",
+        "anio": 1955,
+        "genero": "Infantil",
+        "disponible": true
     }
 ]

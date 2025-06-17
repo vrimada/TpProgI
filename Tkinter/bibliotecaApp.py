@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox, simpledialog
-import funciones as funciones
+import Tkinter.funciones as funciones
 
 # Archivos JSON para almacenar los datos
 ARCHIVO_LIBROS = "libros.json"

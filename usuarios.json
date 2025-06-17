@@ -124,5 +124,17 @@
         "nombre": "Kiroshi",
         "apellido": "Elma Bolivar",
         "tipo": "docente"
+    },
+    {
+        "id": "U150",
+        "nombre": "Aylin",
+        "apellido": "Travnik",
+        "tipo": "docente"
+    },
+    {
+        "id": "U151",
+        "nombre": "Vanesa",
+        "apellido": "Rimada",
+        "tipo": "asd7"
     }
 ]

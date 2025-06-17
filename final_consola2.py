@@ -1,47 +1,54 @@
-import utiles as u
+import json
+import os
 
 # Archivos
 ARCHIVO_LIBROS = "libros.json"
 ARCHIVO_USUARIOS = "usuarios.json"
 ARCHIVO_PRESTAMOS = "prestamos.json"
 
+# Cargar o inicializar datos
+def cargar_datos(archivo):
+    if os.path.exists(archivo):
+        with open(archivo, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def guardar_datos(archivo, datos):
+    with open(archivo, "w", encoding="utf-8") as f:
+        json.dump(datos, f, indent=4, ensure_ascii=False)
 
 # Altas de libro en diccionario
 def agregar_libro(libros):
-    nuevo_id = str(len(libros) + 1) # Asignar ID automáticamente como número secuencial
     libro = {
-        "id": "L"+ nuevo_id,
-        "titulo": u.pedir_string("Título: "),
-        "autor": u.pedir_string("Autor: "),
-        "editorial": u.pedir_string("Editorial: "),
-        "anio": u.pedir_entero("Año: "),
-        "genero": u.pedir_string("Género: "),
+        "id": input("ID del libro: "),
+        "titulo": input("Título: "),
+        "autor": input("Autor: "),
+        "editorial": input("Editorial: "),
+        "anio": input("Año: "),
+        "genero": input("Género: "),
         "disponible": True
     }
     libros.append(libro)
-    print(" Libro agregado con éxito. ID asignado: " f"{libro['id']}")
-
+    print("✅ Libro agregado con éxito.")
 #alta de usuario en diccionario
 def agregar_usuario(usuarios):
-     
-    nuevo_id = str(len(usuarios) + 1) # Asignar ID automáticamente como número secuencial
-
     usuario = {
-        "id": "U" + nuevo_id,
-        "nombre": u.pedir_string("Nombre: "),
-        "apellido": u.pedir_string("Apellido: "),
-        "tipo": u.valida_tipo_usuario("Tipo (alumno/docente): ")
+        "id": input("ID de usuario: "),
+        "nombre": input("Nombre: "),
+        "apellido": input("Apellido: "),
+        "tipo": input("Tipo (alumno/docente): ").lower()
     }
     usuarios.append(usuario)
-    print(" Usuario agregado con éxito. ID asignado: " f"{usuario['id']}")
+    print("✅ Usuario agregado con éxito.")
 
 #Revisar
 def registrar_prestamo(prestamos, libros, usuarios):
 
     #agregar una funcion que poniendo el nombre del libro busque el ID y usarla ara la variable id_libro
-    id_libro = u.pedir_string("ID del libro a prestar: ")
-    id_usuario = u.pedir_string("ID del usuario: ") #id_usuario esta en el carnet
-   
+    id_libro = input("ID del libro a prestar: ")
+    id_usuario = input("ID del usuario: ")
+    #id_usuario esta en el carnet
+
     libro = next((l for l in libros if l["id"] == id_libro and l["disponible"]), None)
     if not libro:
         print(" Libro no disponible o no existe.")
@@ -63,7 +70,7 @@ def registrar_prestamo(prestamos, libros, usuarios):
 
 # Devolución
 def devolver_libro(prestamos, libros):
-    id_libro = u.pedir_string("ID del libro a devolver: ")
+    id_libro = input("ID del libro a devolver: ")
     prestamo = next((p for p in prestamos if p["id_libro"] == id_libro and not p["fecha_devolucion"]), None)
 
     if not prestamo:
@@ -85,17 +92,27 @@ def mostrar_libros(libros):
         print(f"{libro['id']} - {libro['titulo']} ({estado})")
 
 def mostrar_usuarios(usuarios):
-    print(" Lista de usuarios:")
+    print("👤 Lista de usuarios:")
     for u in usuarios:
         print(f"{u['id']} - {u['nombre']} {u['apellido']} ({u['tipo']})")
 
 
 
+
+
+#REVISARREVISARREVISAR
+
+#agregar una funcion que imprima todos los libros restados y a quien
+
+#def cargar_datos(nombre_archivo):
+   # with open(nombre_archivo, 'r', encoding='utf-8') as archivo:
+    #    return json.load(archivo)
+
 def mostrar_prestamos_activos():
     # Cargar datos desde los archivos JSON
-    libros = u.cargar_datos(ARCHIVO_LIBROS)
-    usuarios = u.cargar_datos(ARCHIVO_USUARIOS)
-    prestamos = u.cargar_datos(ARCHIVO_PRESTAMOS)
+    libros = cargar_datos("libros.json")
+    usuarios = cargar_datos("usuarios.json")
+    prestamos = cargar_datos("prestamos.json")
 
     # Convertimos libros y usuarios en diccionarios para acceso rápido 
     libros_dict = {libro['id']: libro for libro in libros}
@@ -103,7 +120,7 @@ def mostrar_prestamos_activos():
 
     print(" Listado de libros actualmente prestados:\n")
 
-    prestamos_activos = [p for p in prestamos if p['fecha_devolucion'] is None or p['fecha_devolucion'] == ""]
+    prestamos_activos = [p for p in prestamos if p['fecha_devolucion'] is None]
 
     if not prestamos_activos:
         print("No hay libros prestados actualmente.")
@@ -118,9 +135,9 @@ def mostrar_prestamos_activos():
 
 
 def menu():
-    libros = u.cargar_datos(ARCHIVO_LIBROS)
-    usuarios = u.cargar_datos(ARCHIVO_USUARIOS)
-    prestamos = u.cargar_datos(ARCHIVO_PRESTAMOS)
+    libros = cargar_datos(ARCHIVO_LIBROS)
+    usuarios = cargar_datos(ARCHIVO_USUARIOS)
+    prestamos = cargar_datos(ARCHIVO_PRESTAMOS)
 
     while True:
         print("\n📘 MENÚ BIBLIOTECA ESCOLAR")
@@ -149,9 +166,9 @@ def menu():
         elif opcion == "7":
             mostrar_prestamos_activos()
         elif opcion == "8":    
-            u.guardar_datos(ARCHIVO_LIBROS, libros)
-            u.guardar_datos(ARCHIVO_USUARIOS, usuarios)
-            u.guardar_datos(ARCHIVO_PRESTAMOS, prestamos)
+            guardar_datos(ARCHIVO_LIBROS, libros)
+            guardar_datos(ARCHIVO_USUARIOS, usuarios)
+            guardar_datos(ARCHIVO_PRESTAMOS, prestamos)
             print("💾 Datos guardados. ¡Hasta luego!")
             break
         else:
