@@ -1,4 +1,6 @@
 import utiles as u
+from colorama import Fore, Style, init
+init()
 
 # Archivos
 ARCHIVO_LIBROS = "libros.json"
@@ -35,7 +37,7 @@ def agregar_usuario(usuarios):
     usuarios.append(usuario)
     print(" Usuario agregado con éxito. ID asignado: " f"{usuario['id']}")
 
-#Revisar
+
 def registrar_prestamo(prestamos, libros, usuarios):
 
     #agregar una funcion que poniendo el nombre del libro busque el ID y usarla ara la variable id_libro
@@ -75,7 +77,7 @@ def devolver_libro(prestamos, libros):
         if libro["id"] == id_libro:
             libro["disponible"] = True
             break
-    print(" Libro devuelto con éxito.")
+    print("verde"," Libro devuelto con éxito.")
 
 # Listados
 def mostrar_libros(libros):

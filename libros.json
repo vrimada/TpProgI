@@ -241,5 +241,32 @@
         "anio": 1955,
         "genero": "Infantil",
         "disponible": true
+    },
+    {
+        "id": "L28",
+        "titulo": "La biblia",
+        "autor": "Dios",
+        "editorial": "Eddio",
+        "anio": 3000,
+        "genero": "Aventura",
+        "disponible": true
+    },
+    {
+        "id": "L29",
+        "titulo": "De la tierra a la luna",
+        "autor": "Julio Verne",
+        "editorial": "Edio",
+        "anio": 1985,
+        "genero": "Aventura",
+        "disponible": true
+    },
+    {
+        "id": "L30",
+        "titulo": "a3..",
+        "autor": "a",
+        "editorial": "sda",
+        "anio": 2015,
+        "genero": "asdsa",
+        "disponible": true
     }
 ]

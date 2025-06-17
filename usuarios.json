@@ -136,5 +136,11 @@
         "nombre": "Vanesa",
         "apellido": "Rimada",
         "tipo": "asd7"
+    },
+    {
+        "id": "U24",
+        "nombre": "Nina",
+        "apellido": "Rimada",
+        "tipo": "alumno"
     }
 ]

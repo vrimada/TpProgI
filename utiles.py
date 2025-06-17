@@ -2,6 +2,7 @@ from datetime import datetime
 import json
 import os
 
+
 # Cargar o inicializar datos de un archivo JSON
 def cargar_datos(archivo):
     if os.path.exists(archivo):
@@ -13,6 +14,7 @@ def guardar_datos(archivo, datos):
     with open(archivo, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
 
+
 # Funciones para pedir entradas al usuario con validación
 def pedir_string(mensaje):
         while True:
@@ -20,7 +22,7 @@ def pedir_string(mensaje):
             if valor != "" and not valor.isdigit():
                 return valor
             else:
-                print(" Ingresá un texto válido (no vacío ni solo números).")
+                print( " Ingresá un texto válido (no vacío ni solo números).")
 
 def pedir_entero(mensaje):
     while True:
@@ -28,7 +30,7 @@ def pedir_entero(mensaje):
         try:
             return int(valor)
         except ValueError:
-            print(" Ingresá un número entero válido.")
+           print(" Ingresá un número entero válido.")
 
 def pedir_fecha(mensaje):
     while True:
@@ -46,4 +48,4 @@ def valida_tipo_usuario(mensaje):
             if valor.lower() in ["alumno", "docente"]:
                 return valor.lower()
             else:
-                print(" Ingresá un tioo válido (alumno o docente).")
+                print(" Ingresá un tipo válido (alumno o docente).")
