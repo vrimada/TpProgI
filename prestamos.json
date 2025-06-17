@@ -121,11 +121,5 @@
         "id_usuario": "U150",
         "fecha_prestamo": "30/05/05",
         "fecha_devolucion": ""
-    },
-    {
-        "id_libro": "L017",
-        "id_usuario": "U151",
-        "fecha_prestamo": "30/01/2025",
-        "fecha_devolucion": ""
     }
 ]

@@ -117,6 +117,26 @@ def mostrar_prestamos_activos():
         if libro and usuario:
             print(f"📖 {libro['titulo']} - Prestado a: {usuario['nombre']} {usuario['apellido']}")
 
+def eliminar_libro(libros, id_libro):
+    # Eliminar un libro por ID
+    if(id_libro not in [libro["id"] for libro in libros]):
+        print(u.error(" El libro no existe."))
+        return
+    else:
+        libros = [libro for libro in libros if libro["id"] != id_libro]
+        u.guardar_datos(ARCHIVO_LIBROS, libros)
+        print(" Libro eliminado con éxito.")
+
+def eliminar_usuario(usuarios):
+    # Eliminar un usuario por ID
+    id_usuario = u.pedir_string("ID del usuario a eliminar: ")
+    if(id_usuario not in [usuario["id"] for usuario in usuarios]):
+        print(u.error(" El usuario no existe."))
+        return
+    else:
+        usuarios = [usuario for usuario in usuarios if usuario["id"] != id_usuario]
+        u.guardar_datos(ARCHIVO_USUARIOS, usuarios)
+        print(" Usuario eliminado con éxito.")
 
 def menu():
     libros = u.cargar_datos(ARCHIVO_LIBROS)
@@ -132,7 +152,9 @@ def menu():
         print("5. Mostrar libros")
         print("6. Mostrar usuarios")
         print("7. Imprimir listado de prestamos")
-        print("8. Salir\n")
+        print("8. Eliminar libro")
+        print("9. Eliminar usuario")
+        print("10. Salir\n")
         opcion = input("Elegí una opción: ")
 
       
@@ -153,13 +175,17 @@ def menu():
                 case "7":
                     mostrar_prestamos_activos()
                 case "8":
+                    eliminar_libro(libros, u.pedir_string("ID del libro a eliminar: "))
+                case "9":
+                    eliminar_usuario(usuarios)    
+                case "10":
                     u.guardar_datos(ARCHIVO_LIBROS, libros)
                     u.guardar_datos(ARCHIVO_USUARIOS, usuarios)
                     u.guardar_datos(ARCHIVO_PRESTAMOS, prestamos)
                     print("💾 Datos guardados. ¡Hasta luego!")
                     break
                 case _:
-                    print("Opción no válida. Ingrese un numero del 1 al 8.")
+                    print("Opción no válida. Ingrese un numero del 1 al 10.")
 
 # Ejecutar menú
 if __name__ == "__main__":

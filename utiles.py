@@ -31,11 +31,12 @@ def exito(texto):
     return f"{Fore.GREEN}{texto}{ Style.RESET_ALL}"
 def info(texto):
     return f"{Fore.CYAN}{texto}{ Style.RESET_ALL}"
-# Funciones para pedir entradas al usuario con validación
+
+# Funciones para pedir entradas al usuario con validación   
 def pedir_string(mensaje):
         while True:
             valor = input(mensaje)
-            if valor != "" and not valor.isdigit():
+            if  (valor != "" and not valor.isdigit()):
                 return valor
             else:
                 print( error(" Ingresá un texto válido (no vacío ni solo números)."))
@@ -46,7 +47,7 @@ def pedir_entero(mensaje):
         try:
             return int(valor)
         except ValueError:
-           print( error("rojo"," Ingresá un número entero válido."))
+           print( error(" Ingresá un número entero válido."))
 
 def pedir_fecha(mensaje):
     while True:
@@ -56,7 +57,7 @@ def pedir_fecha(mensaje):
             fecha = datetime.strptime(valor, "%d/%m/%Y")
             return valor
         except ValueError:
-            print( error("rojo"," Ingresá una fecha válida en formato DD/MM/AAAA."))
+            print( error(" Ingresá una fecha válida en formato DD/MM/AAAA."))
 
 def valida_tipo_usuario(mensaje):
         while True:
@@ -64,4 +65,4 @@ def valida_tipo_usuario(mensaje):
             if valor.lower() in ["alumno", "docente"]:
                 return valor.lower()
             else:
-                print( error("rojo"," Ingresá un tipo válido (alumno o docente)."))
+                print( error(" Ingresá un tipo válido (alumno o docente)."))

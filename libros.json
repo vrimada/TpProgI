@@ -198,24 +198,6 @@
         "disponible": true
     },
     {
-        "id": "L101",
-        "titulo": "Nina siesta",
-        "autor": "Vanesa Rimada",
-        "editorial": "Vanesa Editions",
-        "anio": "2025",
-        "genero": "Terror",
-        "disponible": true
-    },
-    {
-        "id": "L101",
-        "titulo": "La nina loca",
-        "autor": "Vanesa Rimada",
-        "editorial": "Vanesa Editions",
-        "anio": 2025,
-        "genero": "Terror",
-        "disponible": true
-    },
-    {
         "id": "L115",
         "titulo": "Steffanos kitchens",
         "autor": "Vanesa Rimada",
@@ -258,15 +240,6 @@
         "editorial": "Edio",
         "anio": 1985,
         "genero": "Aventura",
-        "disponible": true
-    },
-    {
-        "id": "L30",
-        "titulo": "a3..",
-        "autor": "a",
-        "editorial": "sda",
-        "anio": 2015,
-        "genero": "asdsa",
         "disponible": true
     }
 ]
